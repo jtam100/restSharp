@@ -1,13 +1,15 @@
 ### Coding Exercise - Software Engineer in Test
 
-[Company Name] Coding Exercise
+This is a pre-interview exercise for a company I applied to.  There are 4 parts to this exercise which is pretty extensive for a pre-interview problem. It asks for overall testing strategy, coding API tests, performance tests, and UI/integration tests.  
+
+Health Data Analytics Institute Coding Exercise
 
 The goal of the exercise is to demonstrate knowledge of testing strategy, testing approaches and automation coding. Time spent on the exercise should be limited to under 2 hours.
 
 
 <b>REST API to be Tested </b><Br>
 An API to return a patient given a patient ID, and optionally return a list of medications for the patient. <br>
-GET http://test.company-name.com/api/patient/{id},(includemedications)
+GET http://test.hdai.com/api/patient/{id},(includemedications)
 
 | Input Parameter    | Type      | Validation | Required           |
 |--------------------|-----------|------------|--------------------|
