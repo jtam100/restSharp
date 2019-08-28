@@ -23,67 +23,54 @@ GET http://test.company-name.com/api/patient/{id},(includemedications)
 | StartDate      | Date    |                                       |
 | EndDate        | Date    | does not precede start date, optional |
 
-Response
-
+<b>Response</b>
 200
-
-Headers
-Content-Type:application/json
+- Headers
+- Content-Type:application/json
 
 Sample Body
- 
+```json
 [
-{
-"id": 1,
-"FirstName": "Smith", "LastName": "Fred",
-},
-{
-"id": 2,
-"FirstName": "Johnson", "LastName": "Sally", "Medications":[
-{
-"MedicationID":1, "MedicationName":'Acetaminophone', "StartDate":'05/14/2019'
-},
-{
- 
-
-
-
-
-
-
-
-
-
-
+ {
+  "id": 1,
+  "FirstName": "Smith", 
+  "LastName": "Fred",
+ },
+ {
+  "id": 2,
+  "FirstName": "Johnson", 
+  "LastName": 
+  "Sally", 
+  "Medications":[
+   {
+    "MedicationID":1, 
+    "MedicationName":'Acetaminophone', 
+    "StartDate":'05/14/2019'
+   },
+   {
+    "MedicationID":2, 
+    "MedicationName":'Tylenol', 
+    "StartDate":'05/15/2019', 
+    "EndDate":'05/21/2019'
+   }
+ ]
+}
 ]
+```
 
-
-
-Response
-
+<b>Response</b>
 401
+- Headers
+- Content-Type:application/json 
  
-"MedicationID":2, "MedicationName":'Tylenol', "StartDate":'05/15/2019', "EndDate":'05/21/2019'
-}
-]
-}
- 
-
-Headers
-Content-Type:application/json
-
 Body
-
-
-
+```json
 {
 "error": "error.unauthorized"
 }
+```
 
-
-
-
-To Be Completed
+<b>To Be Completed</b>
 
 1.  Briefly describe your overall strategy for testing the API. Questions you might have, different types of ways you might consider testing the
 API, characteristics and functionality you would be looking to verify, etc.
@@ -93,36 +80,56 @@ API, characteristics and functionality you would be looking to verify, etc.
  
 Mock Data
 
-
-
+```json
 "Patients":
 
 [
-{
-"LastName":"Smith", "FirstName":"Fred", "Medications":[
-{
-"MedicationName:"morphine", "Dose":"2mg", "StartDate":"10/10/15"
+ {
+  "LastName":"Smith", 
+  "FirstName":"Fred", 
+  "Medications":[
+   {
+    "MedicationName:"morphine", 
+    "Dose":"2mg", 
+    "StartDate":"10/10/15"
+   },
+  {
+   "MedicationName":"acetaminophen", 
+   "Dose":"325mg", 
+   "StartDate":"10/11/15", 
+   "StopDate:"10/14/15"
+  },
+  {
+   "MedicationName":"furosemide", 
+   "Dose":"20mg", 
+   "StartDate":"10/31/15"
+  }
+ ]
 },
 {
-"MedicationName":"acetaminophen", "Dose":"325mg", "StartDate":"10/11/15", "StopDate:"10/14/15"
-},
-{
-"MedicationName":"furosemide", "Dose":"20mg", "StartDate":"10/31/15"
+ "LastName":"Jones", 
+ "FirstName":"Sally", 
+ "Medications":[
+  {
+   "MedicationID":1, 
+   "MedicationName":"morphine", 
+   "Dose":"1mg", 
+   "StartDate":"10/11/15"
+  },
+  {
+   "MedicationID":2, 
+   "MedicationName":"coumadin", 
+   "Dose":"5mg", 
+   "StartDate:"10/15/15"
+  },
+  {
+   "MedicationID":3, 
+   "MedicationName":"lovenox", 
+   "Dose":"100mg/mL",
+   "StartDate":"10/31/15", 
+   "StopDate":"11/2/15"
+  }
+ ]
 }
 ]
-},
-{
-"LastName":"Jones", "FirstName":"Sally", "Medications":[
-{
-"MedicationID":1, "MedicationName":"morphine", "Dose":"1mg", "StartDate":"10/11/15"
-},
-{
-"MedicationID":2, "MedicationName":"coumadin", "Dose":"5mg", "StartDate:"10/15/15"
-},
-{
-"MedicationID":3, "MedicationName":"lovenox", "Dose":"100mg/mL","StartDate":"10/31/15", "StopDate":"11/2/15"
-}
- 
-]
-}
-]
+```
