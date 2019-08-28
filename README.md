@@ -1,6 +1,11 @@
 ### Coding Exercise - Software Engineer in Test
 
 This is a pre-interview exercise for a company I applied to.  There are 4 parts to this exercise which is pretty extensive for a pre-interview problem. It asks for overall testing strategy, coding API tests, performance tests, and UI/integration tests.  
+1.  Briefly describe your overall strategy for testing the API. Questions you might have, different types of ways you might consider testing the
+API, characteristics and functionality you would be looking to verify, etc.
+2.  Code (in your language of choice) a utility that will loop through the patients in the mock data, invoke the API and verify the results.
+3. Code (in your language or or package/tool choice) a test to generate large concurrent invocations of the API - for performance testing.
+4. Assume a web page exists that displays a single patient and the list of medications for that patient. It’s a React.js SPA - and the user has already logged in selected a patient. Describe how you might use Selenium (or a similar tool) - to load the expected patient data from JSON - and verify that the contents of the web page is correct (correct patient, number of medications, etc.)
 
 Health Data Analytics Institute Coding Exercise
 
