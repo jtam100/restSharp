@@ -1,24 +1,27 @@
-Coding Exercise - Software Engineer in Test
+### Coding Exercise - Software Engineer in Test
 
 [Company Name] Coding Exercise
 
 The goal of the exercise is to demonstrate knowledge of testing strategy, testing approaches and automation coding. Time spent on the exercise should be limited to under 2 hours.
 
 
-REST API to be Tested
-An API to return a patient given a patient ID, and optionally return a list of medications for the patient. GET http://test.company-name.com/api/patient/{id},(includemedications)
+<b>REST API to be Tested </b><Br>
+An API to return a patient given a patient ID, and optionally return a list of medications for the patient. <br>
+GET http://test.company-name.com/api/patient/{id},(includemedications)
 
-Input Parameter	Type	Validation	Required
-id	Numeric	11 digits	Yes
-includemedications	character	Y or N	No (default false)
+| Input Parameter    | Type      | Validation | Required           |
+|--------------------|-----------|------------|--------------------|
+| id                 | Nuneric   | 11 digits  | Yes                |
+| includemedications | character | Y or N     | No (default false) |
 
-Output	Type	Validation
-id	Numeric	11 digits
-LastName	String	Max length of 50
-FirstName	String	Max length of 50
-Medicationname	String	Max length of 150
-StartDate	Date	
-EndDate	Date	does not precede start date, optional
+| Output         | Type    | Validation                            |
+|----------------|---------|---------------------------------------|
+| id             | Nuneric | 11 digits                             |
+| LastName       | String  | Max length of 50                      |
+| FirstName      | String  | Max length of 50                      |
+| Medicationname | String  | Max length of 150                     |
+| StartDate      | Date    |                                       |
+| EndDate        | Date    | does not precede start date, optional |
 
 Response
 
